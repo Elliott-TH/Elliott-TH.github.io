@@ -1,24 +1,16 @@
-// Highlight the active sidebar nav item as the visitor scrolls past each section.
-const sections = document.querySelectorAll('main section[id]');
-const navLinks = document.querySelectorAll('.sidebar-nav a');
+const menuButton = document.querySelector('.menu-button');
+const nav = document.querySelector('.site-nav');
 
-const setActive = (id) => {
-  navLinks.forEach((link) => {
-    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+if (menuButton && nav) {
+  menuButton.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(open));
   });
-};
 
-if ('IntersectionObserver' in window && sections.length) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActive(entry.target.id);
-        }
-      });
-    },
-    { rootMargin: '-40% 0px -50% 0px', threshold: 0 }
-  );
-
-  sections.forEach((section) => observer.observe(section));
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    });
+  });
 }
