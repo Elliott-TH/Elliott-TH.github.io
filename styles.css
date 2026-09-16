@@ -71,7 +71,6 @@ p, h1, h2, h3, figure, dl { margin-top: 0; }
 .site-nav { display: flex; align-items: center; gap: 1.45rem; font-size: .86rem; }
 .site-nav a { text-decoration: none; color: #46525a; }
 .site-nav a:hover { color: var(--accent); }
-.nav-resume { border: 1px solid var(--line-dark); padding: .42rem .72rem; color: var(--ink) !important; }
 .menu-button { display: none; border: 0; background: transparent; font: inherit; }
 
 .hero { padding-top: clamp(5rem, 10vw, 9rem); }
@@ -225,7 +224,6 @@ p, h1, h2, h3, figure, dl { margin-top: 0; }
   }
   .site-nav.open { display: flex; }
   .site-nav a { padding: .7rem 0; border-bottom: 1px solid var(--line); }
-  .nav-resume { border: 0; }
   .hero-grid, .hero-side, .two-col, .split-heading, .pinthac-head, .solver-result { grid-template-columns: 1fr; }
   .hero h1 { font-size: clamp(2.9rem, 14vw, 4.8rem); }
   .hero-facts > div { grid-template-columns: 5.2rem 1fr; }

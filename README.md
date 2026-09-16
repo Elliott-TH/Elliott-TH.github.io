@@ -12,9 +12,6 @@ Responsive static portfolio based on the Minimal Dossier print portfolio. It use
 ├── .nojekyll
 ├── README.md
 └── assets/
-    ├── docs/
-    │   ├── Elliott_Hirko_Resume.pdf
-    │   └── Elliott_Hirko_Portfolio.pdf
     ├── projects/
     │   ├── iapws95-benchmark.svg
     │   ├── iapws95-derivative-validation.svg
@@ -66,24 +63,6 @@ Add a normal anchor wherever you want it in `index.html`, for example:
 
 ```html
 <a href="https://github.com/YOUR_USERNAME/YOUR_REPO">GitHub</a>
-```
-
-### Replace the resume
-
-Overwrite:
-
-```text
-assets/docs/Elliott_Hirko_Resume.pdf
-```
-
-No HTML change is required if the filename stays the same.
-
-### Replace the print portfolio
-
-Overwrite:
-
-```text
-assets/docs/Elliott_Hirko_Portfolio.pdf
 ```
 
 ### Change colors or spacing
